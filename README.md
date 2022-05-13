@@ -18,13 +18,13 @@ python manage.py migrate
 Run the server
 
 ```
-python manage.py runserver
+python manage.py runserver 0.0.0.0:5000
 
 ```
 
 Routes:
 
-Go to `localhost:8000/api`, there you will see all the endpoints of the Api.
+Go to `localhost:5000/api`, there you will see all the endpoints of the Api.
 
 ## Setup front-end
 
@@ -43,7 +43,7 @@ npm i
 Run the server
 
 ```
-yarn start
+npm start
 
 ```
 Go to `localhost:3000`, there you will see the application.
