@@ -99,6 +99,10 @@ class Listing extends Component {
         return (
             <div>
             <div id="UploadDiv" style={{margin:"0 50rem"}}>
+            <h1>File Upload</h1>
+            <br/>
+            <br/>
+
             <Form >
          <InputGroup className="mb-3">
 
@@ -110,7 +114,7 @@ class Listing extends Component {
                 aria-label="Default"
                 aria-describedby="inputGroup-sizing-default"
                 style={{maxWidth:"30rem"}}
-                // accept=".json"
+                accept=".json"
                />
           </InputGroup>  
           <Button variant="primary" onClick={()=>this.submit(this.state.file)}>Upload</Button>

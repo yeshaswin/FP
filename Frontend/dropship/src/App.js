@@ -8,6 +8,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import { useState,useEffect } from "react";
 function App() {
+  document.body.style = 'background: lightblue;';
+
   const [isAuthenticated, userHasAuthenticated] = useState(false);
 
   useEffect(() => {
@@ -47,10 +49,10 @@ function App() {
 
   }
   return (
-    <div className="App">
+    <div className="App" >
       <BrowserRouter>
         <Routes>
-          <Route path="/login" element={<Login onLoad={onLoad}/>} >
+          <Route path="/login" element={<Login onLoad={onLoad} />} >
           </Route>
           {/* <Route path="/upload" element={ <FileUpload ></FileUpload>}>
           </Route>     

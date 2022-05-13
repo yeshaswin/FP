@@ -33,7 +33,7 @@ console.log(props.appProps)
         if(props.appProps){
           return (
             
-            <div>
+            <div >
            <Navb showDashboard={showDashboard} showUpload={showUpload} logout={logout} ></Navb>
            <br/>
            <br/>

@@ -6,6 +6,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import InputGroup from "react-bootstrap/InputGroup";
 import { useNavigate } from "react-router-dom";
 import img from '../FP.png'
+import { Card } from "react-bootstrap";
 export default function Login(props) {
     const [UserName,setUseraName]=useState("")
     const [Password,setPassword]=useState("")
@@ -57,46 +58,59 @@ export default function Login(props) {
 
     }
   return(
-<div>
-  <img src={img} style={{width:"30rem",margin:"10rem 5rem 0 0"}}></img>
-<Form >
-<Row className="mb-3">
-      <Form.Group as={Col} className="mb-3" style={{maxWidth:"25rem",margin:"10rem 20rem 20rem 45rem"}}>
-          <InputGroup className="mb-3">
-            <InputGroup.Text id="inputGroup-sizing-default">
-             User Name
-            </InputGroup.Text>
-            <Form.Control
+<div >
+  <Card className='shadow-lg  mb-9 bg-white rounded'  style={{ width:'30rem' ,height:"40rem",margin:"10rem 20rem 20rem 45rem"}}> 
+  <img src={img} style={{width:"30rem"}}></img>
+  <h3 style={{float:"left" ,marginTop:"1.5rem"}}>SIGN IN</h3>
+
+                <Card.Body style={{background:"white"}}>
+                {/* <Card.Title >SIGN IN</Card.Title> */}
+                <Form >
+                <Row className="mb-3">
+                <Form.Group as={Col} className="mb-3" >
+                <InputGroup className="mb-3">
+                <InputGroup.Text id="inputGroup-sizing-default">
+                Username
+                </InputGroup.Text>
+                <Form.Control
                 required
 
                 onChange={(e) =>{ setUseraName(e.target.value)
                 }}
                 value={UserName}
-              aria-label="Default"
-              aria-describedby="inputGroup-sizing-default"
-               />
-          </InputGroup>
-          <InputGroup className="mb-3">
-            <InputGroup.Text id="inputGroup-sizing-default">
-              Password
-            </InputGroup.Text>
-            <Form.Control
+                aria-label="Default"
+                aria-describedby="inputGroup-sizing-default"
+                />
+                </InputGroup>
+                <InputGroup className="mb-3">
+                <InputGroup.Text id="inputGroup-sizing-default">
+                Password
+                </InputGroup.Text>
+                <Form.Control
                 required
                 onChange={(e) => setPassword(e.target.value)}
                 value={Password}
                 type="password"
-              aria-label="Default"
-              aria-describedby="inputGroup-sizing-default"
-            />
-          </InputGroup>
-        </Form.Group>
-        {/* <Form.Group as={Col} className="mb-3">
+                aria-label="Default"
+                aria-describedby="inputGroup-sizing-default"
+                />
+                </InputGroup>
+                </Form.Group>
+                {/* <Form.Group as={Col} className="mb-3">
 
-        </Form.Group> */}
-        </Row>
-        <Button variant="success" onClick={onsubmit} style={{margin:"10rem 5rem 0 0"}} size="lg">Login</Button>
+                </Form.Group> */}
+                </Row>
+                <Button variant="success" onClick={onsubmit}  size="lg">Login</Button>
 
-        </Form>
+                </Form>
+                {/* <Button id={record.id+"deletecard"} variant="danger" onClick={()=>this.deletecard(record.id)} style={{float:"left"}}>delete</Button> */}
+
+            </Card.Body>
+
+
+
+        </Card>
+
 </div>
   )
 }

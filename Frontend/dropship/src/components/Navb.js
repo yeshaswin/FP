@@ -9,9 +9,9 @@ function Navb(props){
 
     return (
         <div  style={{position:"fixed" ,top:"0",width:"100%",zIndex:"1"}}>
-      <Navbar bg="dark" variant="dark">
+      <Navbar  bg="dark" variant='dark'>
       <Navbar.Brand href="" className='' style={{marginLeft:"20px"}} ><img src={logo} style={{width:"200px"}}></img> </Navbar.Brand>
-        <Navbar.Brand style={{margin:"0 40rem"}}>File Upload</Navbar.Brand>
+        {/* <Navbar.Brand style={{margin:"0 40rem"}}>File Upload</Navbar.Brand> */}
         <Container >
     <Nav variant="pills" defaultActiveKey="upload">
     <Nav.Item>
