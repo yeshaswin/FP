@@ -20,12 +20,7 @@ class Listing extends Component {
     }
 
     componentDidMount() {
-        if(this.props.isauth){
-            console.log("heyyy")
-        }
-        else{
-            console.log("fuka")
-        }
+
         fetch('http://localhost:5000/api/task-list/')
             .then(response => response.json())
             .then(records => {
